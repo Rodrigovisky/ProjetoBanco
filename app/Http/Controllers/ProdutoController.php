@@ -93,4 +93,4 @@ class ProdutoController extends Controller
             return redirect()->route('produtos.index')->with('failure', 'Erro ao excluir o registro!');
         }
     }
-}
+} //teste
