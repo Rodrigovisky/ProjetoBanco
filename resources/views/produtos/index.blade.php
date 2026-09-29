@@ -33,10 +33,10 @@
         @foreach ($produtos as $produto)
             <tr>
                 <td>{{ $produto->id }}</td>
-                <td>{{ $produto->nome }}</td>
-                <td>{{ $produto->descricao }}</td>
-                <td>R$ {{ number_format($produto->preco, 2, ',', '.') }}</td>
-                <td>{{ $produto->estoque }}</td>
+                <td>{{ $produto->sabor }}</td>
+                <td>{{ $produto->igredientes }}</td>
+                <td>R$ {{ number_format($produto->valor, 2, ',', '.') }}</td>
+                <td>{{ $produto->quantidade }}</td>
                 <td>
                     <a href="/produtos/{{ $produto->id }}/edit" class="btn btn-warning btn-sm">Editar</a>
                     <a href="/produtos/{{ $produto->id }}" class="btn btn-info btn-sm text-white">Consultar</a>

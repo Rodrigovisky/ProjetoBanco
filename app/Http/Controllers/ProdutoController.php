@@ -23,12 +23,12 @@ class ProdutoController extends Controller
     public function store(Request $request)
     {
         try {
-            $request->validate([
-                'nome' => 'required|string|max:255',
-                'descricao' => 'nullable|string',
-                'preco' => 'required|numeric|min:0',
-                'estoque' => 'required|integer|min:0',
-            ]);
+           $request->validate([
+    'sabor' => 'required|string|max:255',
+    'ingredientes' => 'nullable|string',
+    'valor_unitario' => 'required|numeric|min:0',
+    'quantidade_disponivel' => 'required|integer|min:0',
+]);
 
             Produto::create($request->all());
 
@@ -57,12 +57,12 @@ class ProdutoController extends Controller
     public function update(Request $request, string $id)
     {
         try {
-            $request->validate([
-                'nome' => 'required|string|max:255',
-                'descricao' => 'nullable|string',
-                'preco' => 'required|numeric|min:0',
-                'estoque' => 'required|integer|min:0',
-            ]);
+           $request->validate([
+    'sabor' => 'required|string|max:255',
+    'ingredientes' => 'nullable|string',
+    'valor_unitario' => 'required|numeric|min:0',
+    'quantidade_disponivel' => 'required|integer|min:0',
+]);
 
             $produto = Produto::findOrFail($id);
             $produto->update($request->all());

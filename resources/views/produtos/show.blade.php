@@ -10,22 +10,22 @@
     @method('DELETE')
 
     <div class="mb-3">
-        <label for="nome" class="form-label">Nome</label>
+        <label for="nome" class="form-label">Sabor</label>
         <input type="text" id="nome" class="form-control" value="{{ $produto->nome }}" disabled>
     </div>
 
     <div class="mb-3">
-        <label for="descricao" class="form-label">Descrição</label>
+        <label for="descricao" class="form-label">Igredientes</label>
         <textarea id="descricao" class="form-control" rows="3" disabled>{{ $produto->descricao }}</textarea>
     </div>
 
     <div class="mb-3">
-        <label for="preco" class="form-label">Preço (R$)</label>
+        <label for="preco" class="form-label">Valor (R$)</label>
         <input type="text" id="preco" class="form-control" value="R$ {{ number_format($produto->preco, 2, ',', '.') }}" disabled>
     </div>
 
     <div class="mb-3">
-        <label for="estoque" class="form-label">Estoque</label>
+        <label for="estoque" class="form-label">Quantidade</label>
         <input type="text" id="estoque" class="form-control" value="{{ $produto->estoque }}" disabled>
     </div>
 
