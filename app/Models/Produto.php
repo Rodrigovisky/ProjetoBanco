@@ -8,15 +8,15 @@ class Produto extends Model
 {
     protected $table = 'produtos';
 
-    protected $fillable = [
-        'nome',
-        'descricao',
-        'preco',
-        'estoque',
-    ];
+   protected $fillable = [
+    'sabor',
+    'ingredientes',
+    'valor_unitario',
+    'quantidade_disponivel',
+];
 
-    protected $casts = [
-        'preco' => 'decimal:2',
-        'estoque' => 'integer',
-    ];
+protected $casts = [
+    'valor_unitario' => 'decimal:2',
+    'quantidade_disponivel' => 'integer',
+];
 }
