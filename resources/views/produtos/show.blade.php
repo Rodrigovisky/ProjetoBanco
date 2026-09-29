@@ -15,8 +15,8 @@
     </div>
 
     <div class="mb-3">
-        <label for="descricao" class="form-label">Igredientes</label>
-        <textarea id="descricao" class="form-control" rows="3" disabled>{{ $produto->descricao }}</textarea>
+        <label for="descricao" class="form-label">Ingredientes</label>
+        <textarea id="descricao" class="form-control" rows="3" disabled>{{ $produto->ingredientes }}</textarea>
     </div>
 
     <div class="mb-3">

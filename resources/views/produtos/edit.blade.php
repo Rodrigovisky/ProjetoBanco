@@ -15,18 +15,18 @@
     </div>
 
     <div class="mb-3">
-        <label for="descricao" class="form-label">Descrição / Ingredientes</label>
-        <textarea id="descricao" name="igredientes" class="form-control" rows="3">{{ $produto->descricao }}</textarea>
+        <label for="descricao" class="form-label">Ingredientes / Ingredientes</label>
+        <textarea id="descricao" name="ingredientes" class="form-control" rows="3">{{ $produto->descricao }}</textarea>
     </div>
 
     <div class="mb-3">
-        <label for="preco" class="form-label">Preço (R$)</label>
-        <input type="number" step="0.01" id="valor" name="preco" class="form-control" value="{{ $produto->preco }}" required>
+        <label for="preco" class="form-label">Valor (R$)</label>
+        <input type="number" step="0.01" id="valor" name="valor" class="form-control" value="{{ $produto->valor }}" required>
     </div>
 
     <div class="mb-3">
         <label for="estoque" class="form-label">Quantidade em Estoque</label>
-        <input type="number" id="estoque" name="quantidade" class="form-control" value="{{ $produto->estoque }}" required>
+        <input type="number" id="estoque" name="quantidade" class="form-control" value="{{ $produto->quantidade }}" required>
     </div>
 
     <button type="submit" class="btn btn-primary">Atualizar</button>
