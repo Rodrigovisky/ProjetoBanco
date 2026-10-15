@@ -14,6 +14,10 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/dashboard', function () {
         return redirect()->route('produtos.index');
     })->name('dashboard');
+    Route::middleware(['auth'])->group(function () {
+    Route::resource('produtos', ProdutoController::class);
+    Route::resource('compras', CompraController::class); // Rotas de Compras
+});
 
     // Suas rotas do CRUD de produtos
     Route::resource('produtos', ProdutoController::class);
