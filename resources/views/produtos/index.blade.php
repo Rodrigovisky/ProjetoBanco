@@ -218,11 +218,22 @@
     function comprarItem(id, sabor, preco) {
         // Se estiver logado ou não, pode direcionar direto para o carrinho ou checkout
         @if(session('cliente_logado'))
+        <!-- Exemplo dentro do loop dos produtos na tabela de index -->
+<td>
+    <a href="{{ route('pedidos.create', ['produto_id' => $produto->id]) }}" class="btn btn-success btn-sm">🛒 Comprar</a>
+    <a href="{{ route('produtos.edit', $produto->id) }}" class="btn btn-warning btn-sm">Editar</a>
+    <form action="{{ route('produtos.destroy', $produto->id) }}" method="POST" class="d-inline" onsubmit="return confirm('Tem certeza?')">
+        @csrf
+        @method('DELETE')
+        <button type="submit" class="btn btn-danger btn-sm">Excluir</button>
+    </form>
+</td>
             alert('Item adicionado ao pedido: ' + sabor + ' - R$ ' + preco.toFixed(2));
         @else
             // Abre o modal de login automaticamente se não estiver autenticado
             var loginModal = new bootstrap.Modal(document.getElementById('loginModal'));
             loginModal.show();
+            
         @endif
     }
 </script>

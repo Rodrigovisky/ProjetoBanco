@@ -17,6 +17,10 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::middleware(['auth'])->group(function () {
     Route::resource('produtos', ProdutoController::class);
     Route::resource('compras', CompraController::class); // Rotas de Compras
+    Route::middleware(['auth'])->group(function () {
+    // ... suas rotas anteriores (produtos e compras) ...
+    Route::resource('pedidos', PedidoController::class)->except(['edit', 'update']);
+});
 });
 
     // Suas rotas do CRUD de produtos
